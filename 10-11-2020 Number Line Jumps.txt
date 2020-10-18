@@ -1,8 +1,8 @@
-#Java7
-#Problem Name: Number Line Jumps
-#link: https://www.hackerrank.com/challenges/kangaroo/problem
-#Difficulty: Easy (10.0 points)
-#10/11/2020
+// Java7
+// Problem Name: Number Line Jumps
+// link: https://www.hackerrank.com/challenges/kangaroo/problem
+// Difficulty: Easy (10.0 points)
+// 10/11/2020
 
 import java.io.*;
 import java.math.*;
