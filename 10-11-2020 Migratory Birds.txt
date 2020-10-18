@@ -1,8 +1,8 @@
-#Java7
-#Problem Name: Migratory Birds
-#link: https://www.hackerrank.com/challenges/migratory-birds/problem
-#Difficulty: Easy (10.0 points)
-#10/11/2020
+// Java7
+// Problem Name: Migratory Birds
+// link: https://www.hackerrank.com/challenges/migratory-birds/problem
+// Difficulty: Easy (10.0 points)
+// 10/11/2020
 
 import java.io.*;
 import java.math.*;
