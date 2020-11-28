@@ -1,0 +1,32 @@
+#!/bin/python3
+#Problem Name: Picking Numbers
+#link: https://www.hackerrank.com/challenges/picking-numbers/problem
+#Difficulty: Easy (20.0 points)
+#11/28/2020
+
+import math
+import os
+import random
+import re
+import sys
+
+def pickingNumbers(a):
+    a.sort();
+    maxi = 0;
+    for i in range(len(a)-1):
+        maxi = max(maxi, a.count(a[i])+a.count(a[i]+1));
+    return maxi;
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = pickingNumbers(a)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
