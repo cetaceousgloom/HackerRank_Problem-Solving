@@ -1,0 +1,36 @@
+#!/bin/python3
+#Problem Name: The Hurdle Race
+#link: https://www.hackerrank.com/challenges/the-hurdle-race/problem
+#Difficulty: Easy (15.0 points)
+#12/05/2020
+
+import math
+import os
+import random
+import re
+import sys
+
+def hurdleRace(k, height):
+    result = 0
+    if max(height) >= k:
+        result = max(height)-k
+    else:
+        result = 0
+    return result
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    height = list(map(int, input().rstrip().split()))
+
+    result = hurdleRace(k, height)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
