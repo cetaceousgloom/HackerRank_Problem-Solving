@@ -1,0 +1,38 @@
+#!/bin/python3
+#Problem Name: Jumping on the Clouds
+#link: https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
+#Difficulty: Easy (20.0 points)
+#12/05/2020
+
+import math
+import os
+import random
+import re
+import sys
+
+def jumpingOnClouds(c):
+    count=0;
+    i=0;
+    c.insert(len(c),0)
+    print(c)
+    while i<len(c)-2:
+        if c[i+2] == 0:
+            count+=1
+            i+=2
+        else:
+            count+=1
+            i+=1
+    return count
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    c = list(map(int, input().rstrip().split()))
+
+    result = jumpingOnClouds(c)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
