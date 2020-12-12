@@ -1,0 +1,44 @@
+#!/bin/python3
+#Problem Name: Halloween Sale
+#link: https://www.hackerrank.com/challenges/halloween-sale/problem
+#Difficulty: Easy (20.0 points)
+#12/12/2020
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def howManyGames(p, d, m, s):
+    if p > s: return 0;
+    else:
+        count = 1;
+        s = s - p;
+        while s - p + d >= 0 and p - d > m:
+                s = s - p + d;
+                p = p - d;
+                count += 1;
+        if p - d <= m: count += s // m;
+    return count;
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    pdms = input().split()
+
+    p = int(pdms[0])
+
+    d = int(pdms[1])
+
+    m = int(pdms[2])
+
+    s = int(pdms[3])
+
+    answer = howManyGames(p, d, m, s)
+
+    fptr.write(str(answer) + '\n')
+
+    fptr.close()
